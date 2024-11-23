@@ -1,5 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "SprunkiHub", HidePremium = false, SaveConfig = true, ConfigFolder = "SprunkiHubConfig"})
+
+local Main = OrionLib:MakeWindow({Name = "SprunkiHub", HidePremium = false, SaveConfig = true, ConfigFolder = "SprunkiHubConfig"})
 
 local highlightEnabled = false
 local destroyEnabled = false
@@ -72,11 +73,11 @@ end
 end
 end
 
-Window:AddSection({
+Main:AddSection({
 Name = "Highlight"
 })
 
-Window:AddToggle({
+Main:AddToggle({
 Name = "Toggle Highlight",
 Default = false,
 Callback = function(value)
@@ -89,11 +90,11 @@ end
 end
 })
 
-Window:AddSection({
+Main:AddSection({
 Name = "Destroy"
 })
 
-Window:AddToggle({
+Main:AddToggle({
 Name = "Toggle Destroy",
 Default = false,
 Callback = function(value)
@@ -104,11 +105,11 @@ end
 end
 })
 
-Window:AddSection({
+Main:AddSection({
 Name = "Admin Powers"
 })
 
-Window:AddTextbox({
+Main:AddTextbox({
 Name = "Teleport to Player",
 Default = "",
 TextDisappear = false,
@@ -117,7 +118,7 @@ teleportToPlayer(value)
 end
 })
 
-Window:AddToggle({
+Main:AddToggle({
 Name = "Toggle God Mode",
 Default = false,
 Callback = function(value)
@@ -126,7 +127,7 @@ toggleGodMode()
 end
 })
 
-Window:AddButton({
+Main:AddButton({
 Name = "Fling All",
 Callback = function()
 flingAll()
